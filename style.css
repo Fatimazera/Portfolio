@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+body {
+    background-color: #030011;
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    background-image:
+
+        radial-gradient(circle at top center,
+            rgba(160, 84, 227, 0.25),
+            transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+
+    background-size: auto, 30px 30px, 30px 30px;
+}
+:root {
+    --radius: .5rem;
+    --background: oklch(15% .04 285);
+    --foreground: oklch(96% .01 280);
+    --card: oklch(19% .05 285);
+    --card-foreground: oklch(96% .01 280);
+    --primary: oklch(75% .22 330);
+    --primary-foreground: oklch(12% .03 285);
+    --secondary: oklch(78% .18 195);
+    --secondary-foreground: oklch(12% .03 285);
+    --muted: oklch(24% .04 285);
+    --muted-foreground: oklch(72% .04 280);
+    --accent: oklch(82% .22 140);
+    --accent-foreground: oklch(12% .03 285);
+    --neon: oklch(75% .22 330);
+    --neon-alt: oklch(78% .18 195);
+    --border: oklch(30% .06 285);
+    --ring: oklch(75% .22 330);
+    --gradient-hero: radial-gradient(ellipse at top, oklch(28% .15 300 / .6), transparent 60%), radial-gradient(ellipse at bottom, oklch(28% .12 200 / .5), transparent 60%);
+    --gradient-neon: linear-gradient(135deg, var(--neon), var(--neon-alt));
+    --shadow-neon: 0 0 20px oklch(75% .22 330 / .5), 0 0 40px oklch(75% .22 330 / .3);
+    --shadow-cyan: 0 0 20px oklch(78% .18 195 / .5), 0 0 40px oklch(78% .18 195 / .3);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0D1117;
+    z-index: 1000;
+
+}
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.logo {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+.home-content {
+    margin-top: 9rem;
+    padding: 1.5rem 1rem;
+}
+.whoami {
+    color: aqua;
+}
+.home-content h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 50px;
+    padding: 10px;
+}
+.home-content p {
+    padding: 4px;
+    font-size: small;
+}
+.small-desc {
+    line-height: 25px;
+    font-family: "JetBrains Mono", monospace;
+
+}
+.buttons-home {
+    display: flex;
+    gap: 1rem;
+    padding: 0.1rem 0.9rem;
+
+}
+.view-quests {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    background: var(--gradient-neon);
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow-neon);
+}
+.Ping-me {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    background: transparent;
+    box-shadow: var(--shadow-cyan);
+
+}
+.home-images {
+    position: relative;
+
+    width: 550px;
+    height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scene {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+.scene.active {
+
+    opacity: 1;
+    visibility: visible;
+}
+.scene img {
+
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    user-select: none;
+    pointer-events: none;
+
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, .15));
+}
+.fatima {
+    background: var(--gradient-neon);
+    color: #0000;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.about {
+    margin-top: 80px;
+    padding: 5rem 1rem;
+
+}
+.highlight-name {
+    color: var(--primary);
+
+    text-shadow:
+        0 0 5px var(--primary),
+        0 0 10px var(--primary),
+        0 0 20px var(--primary);
+}
+.about h1 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+    text-shadow: var(--shadow-cyan);
+}
+.about div p {
+    font-size: 15px;
+}
+.para-two {
+    color: grey;
+    margin-bottom: 2rem;
+}
+.about-boxes {
+    display: flex;
+    max-width: 850px;
+}
+.card {
+
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 10px;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* transition: .1s; */
+    font-size: 10px;
+
+
+}
+.card:hover {
+    cursor: text;
+    border-color: var(--primary);
+    /* box-shadow: var(--shadow-neon); */
+
+}
+/* .icon{
+    width:58px;
+    height:58px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.5rem;
+    border-radius:12px;
+    background:rgba(255,0,255,.08);
+    color:var(--primary);
+} */
+.about-boxes article p {
+    font-size: 10px;
+    color: grey;
+}
+.about-boxes article h3 {
+    font-size: 12px;
+}
+.main-tag {
+    font-family: "Press Start 2P", system-ui;
+    margin-bottom: 0;
+}
+.tech-interests {
+    margin-top: 5px;
+    padding: 5rem 1rem;
+
+
+}
+.main-heading {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    text-shadow: var(--shadow-neon);
+}
+.tech-interest-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+.card2 {
+    flex: 1;
+    max-width: none;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    padding: 24px;
+    margin-top: 20px;
+}
+.card2:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-neon);
+}
+.game-development {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.ti-para1 {
+    font-size: 12px;
+    color: grey;
+}
+
+.ai-ml {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.ai-ml-para {
+    font-size: 12px;
+    color: grey;
+}
+.full-stack-dev {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.full-stack-para {
+    font-size: 12px;
+    color: grey;
+}
