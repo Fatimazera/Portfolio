@@ -4,6 +4,7 @@
 
     box-sizing: border-box;
 }
+
 body {
     background-color: #030011;
     color: #ffffff;
@@ -18,6 +19,7 @@ body {
 
     background-size: auto, 30px 30px, 30px 30px;
 }
+
 :root {
     --radius: .5rem;
     --background: oklch(15% .04 285);
@@ -40,7 +42,10 @@ body {
     --gradient-neon: linear-gradient(135deg, var(--neon), var(--neon-alt));
     --shadow-neon: 0 0 20px oklch(75% .22 330 / .5), 0 0 40px oklch(75% .22 330 / .3);
     --shadow-cyan: 0 0 20px oklch(78% .18 195 / .5), 0 0 40px oklch(78% .18 195 / .3);
+    --shadow-green: 0 0 20px oklch(82% .22 140 / .5),
+        0 0 40px oklch(82% .22 140 / .3);
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -54,47 +59,57 @@ nav {
     z-index: 1000;
 
 }
+
 ul {
     display: flex;
     gap: 30px;
     list-style: none;
 }
+
 .logo {
     font-family: "Press Start 2P", system-ui;
     font-size: 12px;
     letter-spacing: 2px;
 }
+
 nav a {
     text-decoration: none;
     color: white;
 }
+
 .home-content {
     margin-top: 9rem;
     padding: 1.5rem 1rem;
 }
+
 .whoami {
     color: aqua;
 }
+
 .home-content h1 {
     font-family: "Press Start 2P", system-ui;
     font-size: 50px;
     padding: 10px;
 }
+
 .home-content p {
     padding: 4px;
     font-size: small;
 }
+
 .small-desc {
     line-height: 25px;
     font-family: "JetBrains Mono", monospace;
 
 }
+
 .buttons-home {
     display: flex;
     gap: 1rem;
     padding: 0.1rem 0.9rem;
 
 }
+
 .view-quests {
     font-family: "Press Start 2P", system-ui;
     font-size: 10px;
@@ -105,6 +120,7 @@ nav a {
     color: var(--primary-foreground);
     box-shadow: var(--shadow-neon);
 }
+
 .Ping-me {
     font-family: "Press Start 2P", system-ui;
     font-size: 10px;
@@ -117,6 +133,7 @@ nav a {
     box-shadow: var(--shadow-cyan);
 
 }
+
 .home-images {
     position: relative;
 
@@ -127,6 +144,7 @@ nav a {
     justify-content: center;
     align-items: center;
 }
+
 .scene {
 
     position: absolute;
@@ -144,11 +162,13 @@ nav a {
         opacity .8s ease,
         visibility .8s ease;
 }
+
 .scene.active {
 
     opacity: 1;
     visibility: visible;
 }
+
 .scene img {
 
     max-width: 100%;
@@ -164,17 +184,20 @@ nav a {
 
     filter: drop-shadow(0 0 20px rgba(0, 255, 255, .15));
 }
+
 .fatima {
     background: var(--gradient-neon);
     color: #0000;
     -webkit-background-clip: text;
     background-clip: text;
 }
+
 .about {
     margin-top: 80px;
     padding: 5rem 1rem;
 
 }
+
 .highlight-name {
     color: var(--primary);
 
@@ -183,6 +206,7 @@ nav a {
         0 0 10px var(--primary),
         0 0 20px var(--primary);
 }
+
 .about h1 {
     font-family: "Press Start 2P", system-ui;
     font-size: 25px;
@@ -190,17 +214,21 @@ nav a {
     color: var(--secondary);
     text-shadow: var(--shadow-cyan);
 }
+
 .about div p {
     font-size: 15px;
 }
+
 .para-two {
     color: grey;
     margin-bottom: 2rem;
 }
+
 .about-boxes {
     display: flex;
     max-width: 850px;
 }
+
 .card {
 
     flex: 1;
@@ -217,12 +245,14 @@ nav a {
 
 
 }
+
 .card:hover {
     cursor: text;
     border-color: var(--primary);
     /* box-shadow: var(--shadow-neon); */
 
 }
+
 /* .icon{
     width:58px;
     height:58px;
@@ -238,19 +268,23 @@ nav a {
     font-size: 10px;
     color: grey;
 }
+
 .about-boxes article h3 {
     font-size: 12px;
 }
+
 .main-tag {
     font-family: "Press Start 2P", system-ui;
     margin-bottom: 0;
 }
+
 .tech-interests {
     margin-top: 5px;
     padding: 5rem 1rem;
 
 
 }
+
 .main-heading {
     font-family: "Press Start 2P", system-ui;
     font-size: 25px;
@@ -258,12 +292,14 @@ nav a {
     color: var(--primary);
     text-shadow: var(--shadow-neon);
 }
+
 .tech-interest-box {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: nowrap;
 }
+
 .card2 {
     flex: 1;
     max-width: none;
@@ -275,16 +311,19 @@ nav a {
     padding: 24px;
     margin-top: 20px;
 }
+
 .card2:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-neon);
 }
+
 .game-development {
     font-family: "Press Start 2P", system-ui;
     font-size: 10px;
     margin-bottom: 15px;
     margin-top: 10px;
 }
+
 .ti-para1 {
     font-size: 12px;
     color: grey;
@@ -296,17 +335,100 @@ nav a {
     margin-bottom: 15px;
     margin-top: 10px;
 }
+
 .ai-ml-para {
     font-size: 12px;
     color: grey;
 }
+
 .full-stack-dev {
     font-family: "Press Start 2P", system-ui;
     font-size: 10px;
     margin-bottom: 15px;
     margin-top: 10px;
 }
+
 .full-stack-para {
     font-size: 12px;
     color: grey;
+}
+
+.tech-stack {
+    margin-top: 5px;
+    padding: 5rem 1rem;
+}
+
+.main-heading3 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+    text-shadow: var(--shadow-green);
+}
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 50px;
+    margin-top: 50px;
+}
+.skill {
+    margin-bottom: 4px;
+}
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+}
+.skill-info span:last-child {
+    color: var(--muted-foreground);
+}
+.progress-bar {
+    width: 100%;
+    height: 7px;
+    background: rgba(255, 255, 255, .08);
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+.progress {
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--secondary));
+}
+.python {
+    width: 92%;
+}
+.react {
+    width: 85%;
+}
+.node {
+    width: 80%;
+}
+.git {
+    width: 90%;
+}
+.js {
+    width: 88%;
+}
+.cpp {
+    width: 78%;
+}
+.sql {
+    width: 75%;
+}
+.unity {
+    width: 10%;
+}
+@media(max-width:900px) {
+
+    .skills {
+
+        flex-direction: column;
+
+    }
 }
