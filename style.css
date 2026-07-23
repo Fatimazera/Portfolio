@@ -435,23 +435,60 @@ nav a {
 }
 .quests_completed{
     margin-top: 5px;
+    padding: 5rem 1rem;
+    
 }
 .main-heading4{
     font-family:  "Press Start 2P", system-ui;
     font-size: 25px;
     color: var(--secondary);
     text-shadow: var(--shadow-cyan);
+    margin-bottom: 3rem;
+    margin-top: 5rem;
     
 }
-.project1{
+.quests_completed_box{
     display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: nowrap;
+    width: min(1200px, 95%);
+    margin: 0 auto;
 }
-.project1 h4{
-    font-family: "Press Start 2P", system-ui;
-    font-size:15px;
+.project-card {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    min-width: 0;
     margin-bottom: 1.5rem;
+}
+.project-card:hover{
+    box-shadow: var(--shadow-cyan);
+    color: var(--secondary);
+}
 
+.project-card h4 {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.project-card p {
+    font-size: 12px;
+    color: grey;
+    line-height: 1.6;
+}
+
+.project-card .quest {
+    margin-top: 24px;
+    font-size: 12px;
+    color: grey;
+}
+.trophy-icon{
+    width: 24px;
+    height: 24px;
+    color: #7CFF4F;   
+    margin-bottom: 12px;
 }
