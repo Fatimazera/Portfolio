@@ -424,6 +424,7 @@ nav a {
 .unity {
     width: 10%;
 }
+
 @media(max-width:900px) {
 
     .skills {
@@ -431,4 +432,26 @@ nav a {
         flex-direction: column;
 
     }
+}
+.quests_completed{
+    margin-top: 5px;
+}
+.main-heading4{
+    font-family:  "Press Start 2P", system-ui;
+    font-size: 25px;
+    color: var(--secondary);
+    text-shadow: var(--shadow-cyan);
+    
+}
+.project1{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+.project1 h4{
+    font-family: "Press Start 2P", system-ui;
+    font-size:15px;
+    margin-bottom: 1.5rem;
+
 }
