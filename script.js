@@ -1,3 +1,4 @@
+
 const homebutton = document.getElementById("home-link")
 const aboutbutton = document.getElementById("about-link")
 const techbutton = document.getElementById("tech-link")
@@ -71,3 +72,16 @@ contactbutton.addEventListener("click", function(e){
         behavior : "smooth"
     });
 });
+const slides = document.querySelectorAll(".slide");
+
+let current = 0;
+
+setInterval(() => {
+
+    slides[current].classList.remove("active");
+
+    current = (current + 1) % slides.length;
+
+    slides[current].classList.add("active");
+
+}, 3000);
